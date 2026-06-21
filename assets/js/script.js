@@ -63,11 +63,11 @@ if (logoInput && logoPreview) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                logoPreview.src = ___;
-                logoPreview.style.display = ___;
+                logoPreview.src = none;
+                logoPreview.style.display = block;
             };
 
-            reader.readAsDataURL(___);
+            reader.readAsDataURL(file);
         }
     });
 }
@@ -77,14 +77,28 @@ if (logoInput && logoPreview) {
 
     // ─── FORM VALIDATION ────────────────────────
     // TODO: 
-    var fullName = document.getElementById('name') 
-    function(){
-        if fullName = "" 
-        alert("Enter the name please");
+  
+
+    var fullNameInput = document.getElementById('name');
+    fullNameInput.addEventListener('blur', function () {
+    if (fullNameInput.value === '') {
+        alert('Please enter your full name.');
     }
+});
+    
 
     // ─── TAGLINE COUNTER ────────────────────────
     // TODO: Show a live "X / 100 characters" count
     // below the tagline input field.
+
+
+    var taglineInput = document.getElementById('tagline');
+var taglineCounter = document.getElementById('tagline-counter');
+
+if (taglineInput && taglineCounter) {
+    taglineInput.addEventListener('input', function () {
+        taglineCounter.textContent = taglineInput.value.length + ' / 100 characters';
+    });
+}
 
 });
