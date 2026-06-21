@@ -73,4 +73,14 @@ $replacements = [
 
 $output = str_replace(array_keys($replacements), array_values($replacements), $template);
 
-echo $output;
+
+$outputDir = 'uploads/brochures/';
+if (!file_exists($outputDir)) {
+    mkdir($outputDir, 0777, true);
+}
+$brochureFile = $outputDir . 'brochure_' . time() . '.html';
+file_put_contents($brochureFile, $output);
+
+
+header('Location: thank-you.php?file=' . urlencode($brochureFile));
+exit;
