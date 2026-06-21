@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<form action="generate.php" method="POST" enctype="multipart/form-data">
+
     <div class="header">
         <div class="container">
             <div class="logo">Creativity</div>
@@ -167,9 +169,7 @@
             -->
 
             <div class="form-section action-row">
-                <a href="#" class="btn" onclick="alert('This form is not connected yet. After you set up PHP, make it submit to generate.php.'); return false;">
-                    Generate My Brochure
-                </a>
+                <button type="submit" class="btn">Generate My Brochure</button>
             </div>
 
         </div>
@@ -180,6 +180,7 @@
             <p>&copy; 2026, Creativity . All rights Reserved.</p>
         </div>
     </div>
+</form>
 
     <script src="assets/js/script.js"></script>
 </body>
