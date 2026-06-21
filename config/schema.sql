@@ -1,24 +1,19 @@
-<?php
-$envFile = __DIR__ . '/../.env';
-$env = [];
+CREATE TABLE submissions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
 
-if (file_exists($envFile)) {
-    $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    foreach ($lines as $line) {
-        if (strpos(trim($line), '#') === 0) continue;
-        list($key, $value) = explode('=', $line, 2);
-        $env[trim($key)] = trim($value);
-    }
-}
+    full_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255),
+    phone VARCHAR(50),
 
-$host = $env['DB_HOST'] ?? 'localhost';
-$dbname = $env['DB_NAME'] ?? 'creativity_db';
-$user = $env['DB_USER'] ?? 'root';
-$pass = $env['DB_PASS'] ?? '';
+    company_name VARCHAR(255),
+    tagline VARCHAR(255),
+    address VARCHAR(255),
+    website VARCHAR(255),
+    social_links TEXT,
+    model VARCHAR(50),
+    primary_color VARCHAR(7),
+    secondary_color VARCHAR(7),
+    logo_path VARCHAR(500),
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
-}
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
