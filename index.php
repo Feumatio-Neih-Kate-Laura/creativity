@@ -12,10 +12,10 @@
         <div class="container">
             <div class="logo">Creativity</div>
             <div class="nav">
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
                 <a href="#templates">Templates</a>
                 <a href="#how">How It Works</a>
-                <a href="test.html" class="btn-small" style="color: white;">Create Yours</a>
+                <a href="test.php" class="btn-small" style="color: white;">Create Yours</a>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
             <h1>Create the brochure of your dreams in minutes</h1>
             <p class="hero-sub">Pick a template, add your brand, and get a professional brochure in minutes,
                  no design skills needed.</p>
-            <a href="test.html" class="btn">Create now</a>
+            <a href="test.php" class="btn">Create now</a>
         </div>
     </div>
 
@@ -60,13 +60,13 @@
                     <img src="assets/images/template1-preview (1).png" alt="Template 1 — Classic preview" class="template-box">
                     <h3>Template 1 — Classic</h3>
                     <p>A clean, simple and professional design </p>
-                    <a href="test.html?model=model1" class="btn-small">Try this</a>
+                    <a href="test.php?model=model1" class="btn-small">Try this</a>
                 </div>
                 <div class="template-card">
                     <img src="assets/images/template2-preview (2).png" alt="Template 2 — Modern preview" class="template-box">
                     <h3>Template 2 — Modern</h3>
                     <p>A modern, attractive and updated design</p>
-                    <a href="test.html?model=model2" class="btn-small">Try this</a>
+                    <a href="test.php?model=model2" class="btn-small">Try this</a>
                 </div>
             </div>
         </div>

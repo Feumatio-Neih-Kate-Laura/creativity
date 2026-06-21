@@ -37,8 +37,8 @@ if (isset($_FILES['logo']) && $_FILES['logo']['error'] === UPLOAD_ERR_OK) {
 
 
 $stmt = $pdo->prepare("INSERT INTO submissions 
-    (full_name, email, phone, company_name, tagline, adress, website, social_links, model, primary_color, secondary_color, logo_path) 
-    VALUES (:full_name, :email, :phone, :company_name, :tagline, :adress, :website, :social_links, :model, :primary_color, :secondary_color, :logo_path)");
+    (full_name, email, phone, company_name, tagline, address, website, social_links, model, primary_color, secondary_color, logo_path) 
+    VALUES (:full_name, :email, :phone, :company_name, :tagline, :address, :website, :social_links, :model, :primary_color, :secondary_color, :logo_path)");
 
 $stmt->execute([
     ':full_name' => $fullName,
@@ -46,7 +46,7 @@ $stmt->execute([
     ':phone' => $phone,
     ':company_name' => $companyName,
     ':tagline' => $tagline,
-    ':adress' => $address,
+    ':address' => $address,
     ':website' => $website,
     ':social_links' => $socialLinks,
     ':model' => $model,

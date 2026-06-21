@@ -8,17 +8,20 @@
 </head>
 <body>
 
-<form action="generate.php" method="POST" enctype="multipart/form-data">
+
 
     <div class="header">
         <div class="container">
             <div class="logo">Creativity</div>
             <div class="nav">
-                <a href="index.html">Home</a>
-                <button class=""><a href="test.html">Create Yours</a></button>
+                <a href="index.php">Home</a>
+                <a href="test.php">Create Yours</a>
             </div>
         </div>
     </div>
+
+
+    <form action="generate.php" method="POST" enctype="multipart/form-data">
 
     <div class="builder">
         <div class="container">
@@ -68,44 +71,44 @@
 
                 <div class="field">
                     <label for="name">Full Name </label>
-                    <input type="text" id="name" placeholder="e.g. Kate Laura">
+                    <input type="text" id="name"  placeholder="e.g. Kate Laura" name="full_name">
                 </div>
 
                 <div class="field">
                     <label for="company">Company Name</label>
-                    <input type="text" id="company" placeholder="e.g. Clintlab">
+                    <input type="text" id="company" placeholder="e.g. Clintlab" name="company_name">
                 </div>
                  
 
                 <div class="field">
                     <label for="tagline">Slogan</label>
-                    <input type="text" id="tagline" placeholder="e.g. MTN, everywhere you go">
+                    <input type="text" id="tagline" placeholder="e.g. MTN, everywhere you go" name="slogan">
                     <p id="tagline-counter" style="font-size:12px; color:#999;">0 / 100 characters</p>
                 </div>
                
                  <div class="field">
                         <label for="address">Adress</label>
-                        <input type="text" id="address" placeholder="carrefour simbock">
+                        <input type="text" id="address" placeholder="carrefour simbock" name="adress">
                     </div>
 
                 <div class="row">
                     <div class="field">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="kae@example.com">
+                        <input type="email" id="email" placeholder="kae@example.com" name="email">
                     </div>
                     <div class="field">
                         <label for="phone">Contact</label>
-                        <input type="tel" id="phone" placeholder="+1 234 377 999">
+                        <input type="tel" id="phone" placeholder="+1 234 377 999" name="phone">
                     </div>
                 </div>
                    <div class="row">
                     <div class="field">
                         <label for="website">Website</label>
-                        <input type="url" id="website" placeholder="https://examole.com">
+                        <input type="url" id="website" placeholder="https://examole.com" name="website">
                     </div>
                     <div class="field">
                         <label for="social">Social Media Links</label>
-                        <textarea id="social" placeholder="e.g. https://instagram.com/you, https://facebook.com/you"></textarea>
+                        <textarea id="social" placeholder="e.g. https://instagram.com/you, https://facebook.com/you" name="social_links"></textarea>
                     </div>
                     </div>
                 </div>
@@ -124,12 +127,12 @@
                 <div class="row">
                     <div class="field">
                         <label for="primary-color">Primary Colour</label>
-                        <input type="color" id="primary-color" value="#3B82F6">
+                        <input type="color" id="primary-color" value="#3B82F6" name="primary_color">
                         <div class="swatch" id="primary-swatch"></div>
                     </div>
                     <div class="field">
                         <label for="secondary-color">Secondary Colour</label>
-                        <input type="color" id="secondary-color" value="#1E3A5F">
+                        <input type="color" id="secondary-color" value="#1E3A5F" name="secondary_color">
                         <!-- TODO: The swatch below doesn't update yet.
                              Fix it by adding an event listener in script.js -->
                         <div class="swatch" id="secondary-swatch"></div>
@@ -152,7 +155,7 @@
                 <h2>Step 4: Upload Your Logo</h2>
                 <div class="field">
                     <label for="logo">Logo Image</label>
-                    <input type="file" id="logo" accept="image/png, image/jpeg">
+                    <input type="file" id="logo" accept="image/png, image/jpeg" name="logo">
                     <p class="hint">Accepted: PNG, JPG. Max 2MB.</p>
                     <img src="" alt="" style="display: none; max-width: 150px; margin-top: 10px;" id="logo-preview">
                 </div>
