@@ -10,7 +10,10 @@
 
     <div class="header">
         <div class="container">
-            <div class="logo">Creativity</div>
+           <div class="logo" style="display:flex; align-items:center; gap:8px;">
+            <img src="./assets/images/logo.jpeg" alt="Creativity logo" style="height:34px; width:34px; border-radius:6px; object-fit:cover;">
+                Creativity
+        </div>
             <div class="nav">
                 <a href="index.php">Home</a>
                 <a href="#templates">Templates</a>
