@@ -41,21 +41,47 @@ document.addEventListener('DOMContentLoaded', function () {
     var secondaryInput = document.getElementById('secondary-color');
     var secondarySwatch = document.getElementById('secondary-swatch');
 
-    // TODO: Your code goes here
+     if (secondaryInput && secondarySwatch) {
+        secondaryInput.addEventListener('input', function () {
+        secondarySwatch.style.backgroundColor = this.value;
+        });
+    }
 
     // ─── LOGO PREVIEW ───────────────────────────
     // TODO: When the user selects a logo file,
     // show a small preview of it on the page.
     //
-    // Hint: Use the FileReader API:
-    //   var reader = new FileReader();
-    //   reader.onload = function(e) { ... };
-    //   reader.readAsDataURL(file);
+    
+var logoInput = document.getElementById('logo');
+var logoPreview = document.getElementById('logo-preview');
+
+if (logoInput && logoPreview) {
+    logoInput.addEventListener('change', function () {
+        var file = this.files[0];
+
+        if (file) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                logoPreview.src = ___;
+                logoPreview.style.display = ___;
+            };
+
+            reader.readAsDataURL(___);
+        }
+    });
+}
+
+
+    var logoInput = document.getElementById('logo');
 
     // ─── FORM VALIDATION ────────────────────────
-    // TODO: Before the form submits, check that
-    // required fields (like Full Name) are filled.
-    // Show an alert if something is missing.
+    // TODO: 
+    var fullName = document.getElementById('name') 
+    function(){
+        if fullName = "" 
+        alert("Enter the name please");
+    }
 
     // ─── TAGLINE COUNTER ────────────────────────
     // TODO: Show a live "X / 100 characters" count
