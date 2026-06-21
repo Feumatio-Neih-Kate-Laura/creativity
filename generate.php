@@ -27,11 +27,14 @@ if (empty($fullName)) {
 $logoPath = '';
 if (isset($_FILES['logo']) && $_FILES['logo']['error'] === UPLOAD_ERR_OK) {
     $uploadDir = 'uploads/';
-    $fileName = time() . '_' . basename($_FILES['logo']['name']);
+    $originalName = basename($_FILES['logo']['name']);
+    $safeName = preg_replace('/[^A-Za-z0-9._-]/', '_', $originalName);
+    $fileName = time() . '_' . $safeName;
     $targetPath = $uploadDir . $fileName;
 
     if (move_uploaded_file($_FILES['logo']['tmp_name'], $targetPath)) {
-        $logoPath = $targetPath;
+        $baseUrl = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+        $logoPath = $baseUrl . '/uploads/' . $fileName;
     }
 }
 
